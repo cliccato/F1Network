@@ -69,3 +69,55 @@ a.button {
     background-color: green;
     border-radius: 4px;
 }
+
+/*news card*/
+.news-card {
+    background-color: #fff; /* Colore di sfondo */
+    border: 1px solid #ccc; /* Bordo */
+    border-radius: 5px; /* Bordi arrotondati */
+    padding: 20px; /* Spaziatura interna */
+    margin-bottom: 20px; /* Margine inferiore */
+}
+
+.news-card h2 {
+    font-size: 20px; /* Dimensione del carattere del titolo */
+    margin-bottom: 10px; /* Margine inferiore del titolo */
+}
+
+.news-card p {
+    font-size: 16px; /* Dimensione del carattere del testo */
+    color: #555; /* Colore del testo */
+    margin-bottom: 0; /* Rimuove il margine inferiore del paragrafo */
+}
+
+/*footer*/
+.footer-nav {
+    text-align: center;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.footer-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f2f2f2
+}
+
+.footer-nav ul li a:hover {
+    background-color: #ddd;
+}
