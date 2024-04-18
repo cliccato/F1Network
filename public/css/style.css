@@ -72,52 +72,44 @@ a.button {
 
 /*news card*/
 .news-card {
-    background-color: #fff; /* Colore di sfondo */
-    border: 1px solid #ccc; /* Bordo */
-    border-radius: 5px; /* Bordi arrotondati */
-    padding: 20px; /* Spaziatura interna */
-    margin-bottom: 20px; /* Margine inferiore */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .news-card h2 {
-    font-size: 20px; /* Dimensione del carattere del titolo */
-    margin-bottom: 10px; /* Margine inferiore del titolo */
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .news-card p {
-    font-size: 16px; /* Dimensione del carattere del testo */
-    color: #555; /* Colore del testo */
-    margin-bottom: 0; /* Rimuove il margine inferiore del paragrafo */
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 0;
 }
 
 /*footer*/
-.footer-nav {
+footer {
+    color: #fff;
+    padding: 20px;
     text-align: center;
 }
 
-.footer-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer-nav ul li {
-    display: inline-block;
-    margin-right: 10px;
+.footer-icons a {
+    color: blue;
+    text-decoration: none;
+    margin: 0 10px;
     font-size: 24px;
 }
 
-.footer-nav ul li:last-child {
-    margin-right: 0;
-}
-
-.footer-nav ul li a {
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: #f2f2f2
-}
-
-.footer-nav ul li a:hover {
-    background-color: #ddd;
+.footer-icons a:hover {
+    color: #454bf6;
 }
