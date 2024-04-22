@@ -113,3 +113,18 @@ footer {
 .footer-icons a:hover {
     color: #454bf6;
 }
+
+/*posts*/
+
+.post-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.post-comment {
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+    padding: 5px;
+    margin-top: 5px;
+}

@@ -42,7 +42,7 @@ $result = $conn->query($query);
 if ($result->num_rows == 1) {
     $user = $result->fetch_assoc();
     setcookie("user_id", $user['id'], time() + (86400 * 30), "/");
-    header("Location: home.php");
+    header("Location: homepage.php");
     exit();
 } else {
     header("Location: error.php?message=" . urlencode("Incorrect username or password"));
