@@ -53,7 +53,7 @@ li {
 }
 
 a {
-    color: blue;
+    color: red;
     text-decoration: none;
 }
 
@@ -68,6 +68,10 @@ a.button {
     color: white;
     background-color: green;
     border-radius: 4px;
+}
+
+b {
+    color: red;
 }
 
 /*news card*/
@@ -91,10 +95,15 @@ a.button {
 }
 
 /*footer*/
-footer {
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     color: #fff;
     padding: 20px;
     text-align: center;
+    background-color: #fff;
 }
 
 .footer-icons {
@@ -104,14 +113,14 @@ footer {
 }
 
 .footer-icons a {
-    color: blue;
+    color: red;
     text-decoration: none;
     margin: 0 10px;
     font-size: 24px;
 }
 
 .footer-icons a:hover {
-    color: #454bf6;
+    color: #f64545;
 }
 
 /*posts*/
@@ -127,4 +136,5 @@ footer {
     background-color: #f9f9f9;
     padding: 5px;
     margin-top: 5px;
+    margin-right: 10px;
 }

@@ -14,10 +14,9 @@ function getComments($conn, $postId) {
     $comments = '';
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-            $comments .= '<div class="comment">';
-            $comments .= '<div><strong>Username:</strong> ' . $row['username'] . '</div>';
-            $comments .= '<div><strong>Content:</strong> ' . $row['content'] . '</div>';
-            $comments .= '<div><strong>Date:</strong> ' . $row['pubblish_date'] . '</div>';
+            $comments .= '<div class="post-comment">';
+            $comments .= '<div><b>' . $row['username'] . '</b> ' . $row['pubblish_date'] . '</div>';
+            $comments .= '<div>' . $row['content'] . '</div>';
             $comments .= '</div>';
         }
     } else {
@@ -47,17 +46,17 @@ if (mysqli_num_rows($result_posts) > 0) {
         $comment_count = $row_comments_count['comment_count'];
 
         echo '<div class="post-card">';
-        echo '<div><strong>Username:</strong> ' . $username . '</div>';
-        echo '<div><strong>Content:</strong> ' . $content . '</div>';
-        echo '<div><strong>Date:</strong> ' . $pubblish_date . '</div>';
-        echo '<div><strong>Comments:</strong> ' . $comment_count . '</div>';
+        echo '<div><b>' . $username . '</b> ' . $pubblish_date . '</div>';
+        echo '<div>' . $content . '</div>';
         echo '<div>';
-        echo '<button class="show-comments" onclick="toggleComments(' . $post_id . ')">Show Comments</button>';
+        echo '<i class="fa-regular fa-comment" onclick="toggleComments(' . $post_id . ')"></i> ' . $comment_count;
+        echo '</div>';
         echo '<div class="comments" id="comments-' . $post_id . '" style="display: none;">';
         echo getComments($conn, $post_id);
         echo '</div>';
         echo '</div>';
-        echo '</div>';
+
+
     }
 } else {
     echo 'No posts found.';
