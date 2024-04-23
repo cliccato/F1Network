@@ -7,7 +7,7 @@
     <title>F1 Network</title>
 </head>
 <body>
-    <div class="backgroud">
+    <div class="form-backgroud">
         <form id="authForm" method="post">
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username" required><br>

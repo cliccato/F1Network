@@ -11,14 +11,15 @@ CREATE TABLE IF NOT EXISTS Users (
 CREATE TABLE IF NOT EXISTS Posts (
     id INT AUTO_INCREMENT PRIMARY KEY,
     pubblish_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    content VARCHAR(200),
-    user_id INT
+    content VARCHAR(200) NOT NULL,
+    image_url VARCHAR(100),
+    user_id INT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Comments (
     id INT AUTO_INCREMENT PRIMARY KEY,
     pubblish_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    content VARCHAR(200),
-    post_id INT,
-    user_id INT
+    content VARCHAR(200) NOT NULL,
+    post_id INT NOT NULL,
+    user_id INT NOT NULL
 );
