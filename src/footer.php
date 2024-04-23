@@ -1,8 +1,8 @@
 <footer>
   <div class="footer-icons">
-    <a href="homepage.html"><i class="fas fa-home"></i></a>
-    <a href="search.html"><i class="fas fa-magnifying-glass"></i></a>
-    <a href="news.html"><i class="fas fa-newspaper"></i></a>
+    <a href="homepage.php"><i class="fas fa-home"></i></a>
+    <a href="search.php"><i class="fas fa-magnifying-glass"></i></a>
+    <a href="news.php"><i class="fas fa-newspaper"></i></a>
   </div>
 </footer>
 
