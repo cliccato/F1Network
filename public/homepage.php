@@ -40,6 +40,7 @@ if (mysqli_num_rows($result_posts) > 0) {
         $content = $row_posts['content'];
         $pubblish_date = $row_posts['pubblish_date'];
 
+
         $sql_comments_count = "SELECT COUNT(*) AS comment_count FROM Comments WHERE post_id = $post_id";
         $result_comments_count = mysqli_query($conn, $sql_comments_count);
         $row_comments_count = mysqli_fetch_assoc($result_comments_count);
@@ -48,6 +49,9 @@ if (mysqli_num_rows($result_posts) > 0) {
         echo '<div class="post-card">';
         echo '<div><b>' . $username . '</b> ' . $pubblish_date . '</div>';
         echo '<div>' . $content . '</div>';
+        if(isset($row_posts['image_url'])) {
+            echo '<div><img src="'. $row_posts['image_url'] .'"></div>';
+        }
         echo '<div>';
         echo '<i class="fa-regular fa-comment" onclick="toggleComments(' . $post_id . ')"></i> ' . $comment_count;
         echo '</div>';
