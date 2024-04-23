@@ -50,7 +50,7 @@ if (mysqli_num_rows($result_posts) > 0) {
         echo '<div><b>' . $username . '</b> ' . $pubblish_date . '</div>';
         echo '<div>' . $content . '</div>';
         if(isset($row_posts['image_url'])) {
-            echo '<div><img src="'. $row_posts['image_url'] .'"></div>';
+            echo '<div><img class="post-image" src="'. $row_posts['image_url'] .'"></div>';
         }
         echo '<div>';
         echo '<i class="fa-regular fa-comment" onclick="toggleComments(' . $post_id . ')"></i> ' . $comment_count;
