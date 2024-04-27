@@ -8,7 +8,7 @@
     $xml = simplexml_load_file($feed_url);
 
     if ($xml) {
-        $limit = 10;
+        $limit = 20;
         $count = 0;
         foreach ($xml->channel->item as $item) {
             if ($count < $limit) {
