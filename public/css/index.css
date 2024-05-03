@@ -33,6 +33,7 @@ input[type="submit"] {
     width: calc(100% - 20px); /* Larghezza dell'input con spazio per il bordo */
     margin-bottom: 10px; /* Spazio tra gli input */
     padding: 8px; /* Spaziatura interna */
+    color: #eee;
     background-color: #444;
     border: 1px solid #444; /* Bordo */
     border-radius: 4px; /* Bordi arrotondati */
@@ -58,4 +59,11 @@ label {
     display: block; /* Visualizza le etichette come blocchi separati */
     margin-bottom: 5px; /* Spazio tra le etichette */
     color: #eee;
+}
+
+form img{
+    max-width: 200px; 
+    min-width: 200px;
+    max-height: 100px; 
+    min-width: 100px;
 }
