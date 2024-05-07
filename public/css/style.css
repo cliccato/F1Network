@@ -4,6 +4,7 @@ body {
     color: #ddd; /* Light text for better contrast */
     margin: 20px;
     padding: 20px;
+    cursor: url('../images/cursor.png'), auto;
 }
 
 h1 {

@@ -1,8 +1,10 @@
 body {
     height: 100%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Racing Sans One', 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
+    font-size: 20px;
+    cursor: url('../images/cursor.png'), auto;
 }
 
 .form-backgroud {
@@ -17,26 +19,25 @@ body {
 }
 
 form {
-    width: 300px; /* Imposta la larghezza del form */
-    margin: 0 auto; /* Imposta i margini a "auto" per centrare il form orizzontalmente */
-    background-color: #222; /* Colore di sfondo del form */
-    border: 1px solid #444; /* Bordo */
-    border-radius: 5px; /* Bordi arrotondati */
-    padding: 20px; /* Spaziatura interna */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombra */
+    width: 300px;
+    margin: 0 auto;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 input[type="text"],
 input[type="password"],
 input[type="submit"] {
-    width: calc(100% - 20px); /* Larghezza dell'input con spazio per il bordo */
-    margin-bottom: 10px; /* Spazio tra gli input */
-    padding: 8px; /* Spaziatura interna */
+    width: calc(100% - 20px);
+    padding: 8px;
     color: #eee;
     background-color: #444;
-    border: 1px solid #444; /* Bordo */
-    border-radius: 4px; /* Bordi arrotondati */
+    border: 1px solid #444;
+    border-radius: 4px;
 }
 
 input[type="text"],
@@ -46,18 +47,17 @@ input[type="password"]:focus{
 
 
 input[type="submit"] {
-    background-color: #FF0000; /* Colore di sfondo del pulsante di invio */
-    color: #fff; /* Colore del testo del pulsante di invio */
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse sul pulsante */
+    background-color: #FF0000;
+    color: #fff;
+    cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #cd0007; /* Colore di sfondo del pulsante di invio al passaggio del mouse */
+    background-color: #cd0007;
 }
 
 label {
-    display: block; /* Visualizza le etichette come blocchi separati */
-    margin-bottom: 5px; /* Spazio tra le etichette */
+    display: block;
     color: #eee;
 }
 

@@ -19,12 +19,12 @@ foreach(array_combine($fields, $fieldsSizes) as $field => $fieldSize) {
     }
 
     if(empty($_POST[$field])) {
-        $error_message = $field . ' can''t be null';
+        $error_message = $field . ' can\'t be null';
         break;
     }
 
     if(strlen($_POST[$field]) > $fieldSize) {
-        $error_message = $field . ' can''t be longer than ' . $fieldSize . ' chars';
+        $error_message = $field . ' can\'t be longer than ' . $fieldSize . ' chars';
         break;
     }      
 }
