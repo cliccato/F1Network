@@ -1,73 +1,34 @@
-<?php
-require '../src/connect.php'; 
-require '../src/functions.php'; 
-
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: error.php?message=" . urlencode("Request method not supported"));
-    exit();
-}
-
-$fields = array('username', 'password', 'content');
-$fieldsSizes = array(50, 100, 200);
-
-$error_message = '';
-
-foreach(array_combine($fields, $fieldsSizes) as $field => $fieldSize) {
-    if(!isset($_POST[$field])) {
-        $error_message = $field . ' has to exist';
-        break;
-    }
-
-    if(empty($_POST[$field])) {
-        $error_message = $field . ' can\'t be null';
-        break;
-    }
-
-    if(strlen($_POST[$field]) > $fieldSize) {
-        $error_message = $field . ' can\'t be longer than ' . $fieldSize . ' chars';
-        break;
-    }      
-}
-
-if(!empty($error_message)) {
-    header("Location: error.php?message=" . urlencode($error_message));
-    exit();
-}
-
-$user_id = getUserId($_POST['username'], $_POST['password']); // Assuming this function retrieves the user's ID based on username and password
-if($user_id) {
-    $content = $_POST['content'];
-    if(insertPost($content, $user_id)) {
-        // Post inserted successfully
-        header("Location: success.php?message=" . urlencode("Post created successfully"));
-        exit();
-    } else {
-        // Error inserting post
-        header("Location: error.php?message=" . urlencode("Error creating post"));
-        exit();
-    }
-} else {
-    // Invalid username or password
-    header("Location: error.php?message=" . urlencode("Invalid username or password"));
-    exit();
-}
-?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Write Post</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Racing+Sans+One:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/index.css">
+    <title>F1 Network post</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-    <h2>Write Post</h2>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password"><br><br>
-        <label for="content">Content:</label><br>
-        <textarea id="content" name="content" rows="4" cols="50"></textarea><br><br>
-        <input type="submit" value="Submit">
-    </form>
-</body>
-</html>
+    <div class="form-backgroud">
+        <form id="authForm" method="post">
+        <img src="images/logo.png">
+            <p>Nuovo post</p>
+            <input type="text" id="contenuto" name="contenuto" placeholder="Contenuto" required><br>
+            <input type="text" id="URL" name="URL" placeholder="URL immagine">
+            <input type="submit" value="Crea" name="register">
+        </form>
+    </div>
 
+    <script>
+        var authForm = document.getElementById("authForm");
+
+        authForm.addEventListener("submit", function(event) {
+            var submitButton = event.submitter || document.activeElement;
+            var action;
+
+            action = "addPost.php";
+
+            authForm.action = action;
+        });
+    </script>
+</body>

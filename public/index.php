@@ -12,10 +12,8 @@
     <div class="form-backgroud">
         <form id="authForm" method="post">
         <img src="images/logo.png">
-            <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username" required><br>
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" required><br><br>
+            <input type="text" id="username" name="username" placeholder="username" required><br>
+            <input type="password" id="password" name="password" placeholder="password" required><br><br>
             <input type="submit" value="Login" name="login">
             <input type="submit" value="Register" name="register">
         </form>

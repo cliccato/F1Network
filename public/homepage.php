@@ -46,7 +46,7 @@ if (mysqli_num_rows($result_posts) > 0) {
         $row_comments_count = mysqli_fetch_assoc($result_comments_count);
         $comment_count = $row_comments_count['comment_count'];
 
-        echo '<div class="post-card">';
+        echo '<div class="post-card rounded">';
         echo '<div><b>' . $username . '</b> ' . $pubblish_date . '</div>';
         echo '<div>' . $content . '</div>';
         if(isset($row_posts['image_url'])) {
