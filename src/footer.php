@@ -4,6 +4,7 @@
     <a href="search.php"><i class="fas fa-magnifying-glass"></i></a>
     <a href="news.php"><i class="fas fa-newspaper"></i></a>
     <a href="post.php"><i class="fa-solid fa-pen-to-square"></i>
+    <a href="user.php"><i class="fa-solid fa-user"></i>
   </div>
 </footer>
 

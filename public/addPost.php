@@ -7,22 +7,22 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit();
 }
 
-    if(!isset($_POST['contenuto'])) {
-        $error_message = $field . ' has to exist';
-        header("Location: error.php?message=" . urlencode($error_message));
+if(!isset($_POST['contenuto'])) {
+    $error_message = 'contenuto has to exist';
+    header("Location: error.php?message=" . urlencode($error_message));
 
-    }
+}
 
-    if(empty($_POST['contenuto'])) {
-        $error_message = $field . ' cant be null';
-        header("Location: error.php?message=" . urlencode($error_message));
+if(empty($_POST['contenuto'])) {
+    $error_message = 'contenuto cant be null';
+    header("Location: error.php?message=" . urlencode($error_message));
 
-    }
+}
 
-    if(strlen($_POST['contenuto']) > 200) {
-        $error_message = 'contenuto non può avere più di 200 caratteri';
-        header("Location: error.php?message=" . urlencode($error_message));
-    }
+if(strlen($_POST['contenuto']) > 200) {
+    $error_message = 'contenuto cant be have more than 200 chars';
+    header("Location: error.php?message=" . urlencode($error_message));
+}
 
 $ULR = null;
 
@@ -38,7 +38,7 @@ $userId = null;
 if (isset($_COOKIE['user_id'])) {
     $userId = $_COOKIE['user_id'];
 }else{
-    header("Location: error.php?message=" . urlencode("devi fare l'accesso"));
+    header("Location: error.php?message=" . urlencode("Login first"));
     exit();
 }
 

@@ -45,7 +45,7 @@ if ($result->num_rows > 0) {
 
 $query = "INSERT INTO Users (username, password) VALUES ('$username', '$password')";
 if ($conn->query($query) === TRUE) {
-    header("Location: homepage.php");
+    header("Location: index.php");
     exit();
 } else {
     header("Location: error.php?message=" . urlencode("Error while creating new user"));
