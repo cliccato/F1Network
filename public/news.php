@@ -1,7 +1,7 @@
-<h1>Formula 1 News Feed</h1>
-
 <?php
     require '../src/header.php';
+
+    echo "<h1>Formula 1 News Feed</h1>";
 
     $feed_url = "https://www.autosport.com/rss/feed/f1";
 

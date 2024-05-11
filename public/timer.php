@@ -1,7 +1,3 @@
-<?php
-    require '../src/header.php';
-?>
-
 <div class="timer">
     <div class="content">
         <div class="nums bg" id="days"></div>
@@ -265,7 +261,3 @@ h1 {
     }
 }
 </style>
-
-<?php
-    require '../src/footer.php';
-?>

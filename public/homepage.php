@@ -3,6 +3,8 @@ require '../src/connect.php';
 require '../src/header.php';
 require '../src/functions.php';
 
+echo "<h1>Formula 1 Posts</h1>";
+
 $sql_posts = "SELECT Posts.*, Users.* 
               FROM Posts 
               INNER JOIN Users ON Posts.user_id = Users.id 
@@ -34,11 +36,14 @@ if (mysqli_num_rows($result_posts) > 0) {
         echo '<i class="fa-regular fa-comment" onclick="toggleComments(' . $post_id . ')"></i> ' . $comment_count;
         echo '</div>';
         echo '<div class="comments" id="comments-' . $post_id . '" style="display: none;">';
+        echo '<div class="mb-0 mx-auto">';
+        echo '<form class="comment-form" action="addComments.php" method="post">';
+        echo '<input type="hidden" name="post_id" value="' . $post_id . '">';
+        echo '<input type="text" id="contenuto" name="contenuto" placeholder="Aggiungi un commento" required>';
+        echo '<input type="submit" value="Commenta" name="register">';
+        echo '</form></div>';
         echo getComments($conn, $post_id);
-        echo '</div>';
-        echo '</div>';
-
-
+        echo '</div></div>';
     }
 } else {
     echo 'No posts found.';

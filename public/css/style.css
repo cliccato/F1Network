@@ -1,10 +1,11 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #222;
-    color: #ddd; /* Light text for better contrast */
+    color: #ddd;
     margin: 20px;
     padding: 20px;
     cursor: url('../images/cursor.png'), auto;
+    display: block;
 }
 
 h1 {
@@ -14,12 +15,12 @@ h1 {
 }
 
 h2 {
-    color: #aaa; /* Dimmed headings */
+    color: #aaa;
 }
 
 form {
     margin-bottom: 20px;
-    background-color: #333; /* Darker background for forms */
+    background-color: #333;
     padding: 20px;
 }
 
@@ -28,20 +29,20 @@ input[type="number"],
 input[type="submit"] {
     margin-bottom: 10px;
     padding: 8px;
-    border: 1px solid #444; /* Darker borders for better contrast */
+    border: 1px solid #444;
     border-radius: 4px;
-    background-color: #444; /* Darker background for inputs */
-    color: #ddd; /* Light text for better contrast */
+    background-color: #444;
+    color: #ddd;
 }
 
 input[type="submit"] {
-    background-color: #4caf50;
+    background-color: #f64545;
     color: #fff;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #f64556;
 }
 
 ul {
@@ -51,13 +52,13 @@ ul {
 
 li {
     margin-bottom: 5px;
-    background-color: #333; /* Darker background for list items */
+    background-color: #333;
     padding: 5px;
     border-radius: 4px;
 }
 
 a {
-    color: #f64545; /* Red links for better visibility */
+    color: #f64545;
     text-decoration: none;
 }
 
@@ -70,18 +71,18 @@ a.button {
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background-color: #6f6; /* Green buttons */
+    background-color: #f64545;
     border-radius: 4px;
 }
 
 b {
-    color: #f64545; /* Red text for emphasis */
+    color: #f64545;
 }
 
 /* news card */
 .news-card {
-    background-color: #333; /* Darker background for news cards */
-    border: 1px solid #555; /* Darker borders */
+    background-color: #333;
+    border: 1px solid #555;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
@@ -90,12 +91,12 @@ b {
 .news-card h2 {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #ddd; /* Light text for better contrast */
+    color: #ddd;
 }
 
 .news-card p {
     font-size: 16px;
-    color: #bbb; /* Dimmed text */
+    color: #bbb;
     margin-bottom: 0;
 }
 
@@ -108,49 +109,76 @@ b {
     border-radius: 10px;
 }
 
-/* footer */
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    background-color: #222;
-}
-
-.footer-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-icons a {
-    color: #f64545; /* Red icons */
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 24px;
-}
-
-.footer-icons a:hover {
-    color: #f0a; /* Lighter red on hover */
-}
-
 /* posts */
 .post-card {
-    border: 1px solid #555; /* Darker borders */
+    border: 1px solid #555;
     border-radius: 20px;
     padding: 10px;
     margin-bottom: 20px;
-    background-color: #333; /* Darker background for posts */
+    background-color: #333;
 }
 
 .post-comment {
-    border: 1px solid #666; /* Darker borders */
-    background-color: #444; /* Darker background */
+    border: 1px solid #666;
+    background-color: #444;
     border-radius: 20px;
     padding: 5px;
     margin-top: 5px;
     margin-right: 10px;
+}
+
+.comment-form {
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 0px;
+    margin-right: 0px;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+    z-index: 1000;
+}
+  
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: transparent;
+}
+  
+
+.nav-item {
+    margin-right: 20px;
+    background: transparent;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #f64545;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.nav-item a:hover {
+    color: rgb(255, 102, 102);
+}
+
+.nav-item a i {
+    margin-right: 5px;
+}
+
+.page-content {
+    margin-left: 2%;
+}
+
+footer {
+    margin-left: 2%;
 }
