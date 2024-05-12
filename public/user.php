@@ -20,8 +20,8 @@ if(isset($_GET['userid'])) {
     if (isset($_SESSION['user_id'])) {
         $userId = $_SESSION['user_id'];
     }else{
-        header("Location: error.php?message=" . urlencode("Login first"));
-        exit();
+        header("Location: login.php");
+    exit();
     }
 }
 
