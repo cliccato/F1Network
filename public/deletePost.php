@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $user_id = $row["user_id"];
 } else {
-    header("Location: error.php?message=" . urlencode("Post dont exists"));
+    header("Location: error.php?message=" . urlencode("Post doesn't exists"));
     exit();
 }
 
