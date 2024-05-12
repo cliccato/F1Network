@@ -3,7 +3,6 @@
 <footer>
   <div>
     <b>(C) 2024 F1Network</b>
-    <?php require '../public/timer.php' ?>
   </div>
 </footer>
 

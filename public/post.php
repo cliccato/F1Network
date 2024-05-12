@@ -14,7 +14,7 @@
         <img src="images/logo.png">
             <p>Nuovo post</p>
             <input type="text" id="contenuto" name="contenuto" placeholder="Contenuto" required><br>
-            <input type="text" id="URL" name="URL" placeholder="URL immagine">
+            <input type="text" id="URL" name="URL" placeholder="URL immagine (Opzionale)">
             <input type="submit" value="Crea" name="register">
         </form>
     </div>

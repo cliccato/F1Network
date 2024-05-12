@@ -26,6 +26,9 @@
     <li class="nav-item">
       <a href="user.php"><i class="fas fa-user"></i></a>
     </li>
+    <li class="nav-item">
+      <a href="info.php"><i class="fas fa-circle-info"></i></a>
+    </li>
   </ul>
 </nav>
 

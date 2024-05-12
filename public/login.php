@@ -1,6 +1,7 @@
 <?php
 require '../src/connect.php';
 require '../src/functions.php';
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("Location: error.php?message=" . urlencode("Request method not supported"));
@@ -41,7 +42,7 @@ $result = $conn->query($query);
 
 if ($result->num_rows == 1) {
     $user = $result->fetch_assoc();
-    setcookie("user_id", $user['id'], time() + (86400 * 30), "/");
+    $_SESSION["user_id"] = $user['id'];
     header("Location: homepage.php");
     exit();
 } else {

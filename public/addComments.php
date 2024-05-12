@@ -1,6 +1,7 @@
 <?php
 require '../src/connect.php';
 require '../src/functions.php';
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("Location: error.php?message=" . urlencode("Request method not supported"));
@@ -26,8 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 
 $contenuto = sanitize_input($_POST['contenuto']);
 
-if (isset($_COOKIE['user_id'])) {
-    $userId = $_COOKIE['user_id'];
+if (isset($_SESSION['user_id'])) {
+    $userId = $_SESSION['user_id'];
 }else{
     header("Location: error.php?message=" . urlencode("You have to login to comment"));
     exit();

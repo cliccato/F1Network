@@ -1,6 +1,7 @@
 <?php
 require '../src/connect.php';
 require '../src/functions.php';
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("Location: error.php?message=" . urlencode("Request method not supported"));
@@ -45,8 +46,17 @@ if ($result->num_rows > 0) {
 
 $query = "INSERT INTO Users (username, password) VALUES ('$username', '$password')";
 if ($conn->query($query) === TRUE) {
-    header("Location: index.php");
-    exit();
+    $query = "SELECT * FROM Users WHERE username='$username'";
+    $result = $conn->query($query);
+    if ($result->num_rows == 1) {
+        $user = $result->fetch_assoc();
+        $_SESSION["user_id"] = $user['id'];
+        header("Location: homepage.php");
+        exit();
+    } else {
+        header("Location: index.php");
+        exit();
+    }
 } else {
     header("Location: error.php?message=" . urlencode("Error while creating new user"));
     exit();

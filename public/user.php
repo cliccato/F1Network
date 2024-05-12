@@ -2,6 +2,7 @@
 require '../src/connect.php';
 require '../src/header.php';
 require '../src/functions.php';
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] !== "GET") {
     header("Location: error.php?message=" . urlencode("Request method not supported"));
@@ -16,8 +17,8 @@ if(isset($_GET['userid'])) {
 
     $userId = sanitize_input($_GET['userid']);
 }else {
-    if (isset($_COOKIE['user_id'])) {
-        $userId = $_COOKIE['user_id'];
+    if (isset($_SESSION['user_id'])) {
+        $userId = $_SESSION['user_id'];
     }else{
         header("Location: error.php?message=" . urlencode("Login first"));
         exit();
