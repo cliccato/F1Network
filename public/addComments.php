@@ -1,7 +1,6 @@
 <?php
 require '../src/connect.php';
 require '../src/functions.php';
-session_start();
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("Location: error.php?message=" . urlencode("Request method not supported"));

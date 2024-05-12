@@ -2,7 +2,6 @@
 require '../src/connect.php';
 require '../src/header.php';
 require '../src/functions.php';
-session_start();
 
 if ($_SERVER["REQUEST_METHOD"] !== "GET") {
     header("Location: error.php?message=" . urlencode("Request method not supported"));
