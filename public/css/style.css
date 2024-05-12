@@ -182,3 +182,8 @@ b {
 footer {
     margin-left: 2%;
 }
+
+.search-form {
+    border-radius: 20px;
+    margin-bottom: 20px;
+}

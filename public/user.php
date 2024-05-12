@@ -24,6 +24,30 @@ if(isset($_GET['userid'])) {
     }
 }
 
+$query = "SELECT username FROM users WHERE id = $userId";
+$result = mysqli_query($conn, $query);
+
+if($result) {
+    if(mysqli_num_rows($result) > 0) {
+
+        $row = mysqli_fetch_assoc($result);
+        $username = $row['username'];
+
+        if (substr($username, -1) === 's') {
+
+            echo "<h1>$username' posts</h1>";
+        } else {
+
+            echo "<h1>$username's posts</h1>";
+        }
+    } else {
+        echo "<h1>User's posts</h1>";
+    }
+} else {
+    header("Location: error.php?message=" . urlencode("Query error"));
+    exit();}
+
+
 getUserPosts($conn, $userId);
 
 require '../src/footer.php';
