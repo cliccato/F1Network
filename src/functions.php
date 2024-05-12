@@ -30,7 +30,7 @@ function getComments($conn, $postId) {
 }
 
 function getUserPosts($conn, $user_id) {
-    $sql_posts = "SELECT Posts.*, Users.* 
+    $sql_posts = "SELECT Posts.*, Users.username 
               FROM Posts 
               INNER JOIN Users ON Posts.user_id = Users.id
               WHERE Users.id=$user_id

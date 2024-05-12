@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "GET") {
     if(isset($_GET['parola']) && !empty(trim($_GET['parola']))) {
         $parola = sanitize_input($_GET['parola']);
 
-        $sql_posts = "SELECT Posts.*, Users.* 
+        $sql_posts = "SELECT Posts.*, Users.username 
                       FROM Posts 
                       INNER JOIN Users ON Posts.user_id = Users.id 
                       WHERE Posts.content LIKE '%$parola%'

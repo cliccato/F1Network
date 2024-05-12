@@ -46,7 +46,4 @@ if ($conn->query($sql) === TRUE) {
     header("Location: error.php?message=" . urlencode("Error while deleting the post"));
     exit();
 }
-
-
-
 ?>
