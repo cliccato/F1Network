@@ -5,7 +5,7 @@ require '../src/functions.php';
 
 echo "<h1>Formula 1 Posts</h1>";
 
-$sql_posts = "SELECT Posts.*, Users.* 
+$sql_posts = "SELECT Posts.*, Users.username 
               FROM Posts 
               INNER JOIN Users ON Posts.user_id = Users.id 
               ORDER BY Posts.pubblish_date DESC 

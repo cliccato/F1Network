@@ -31,7 +31,7 @@ function getUserPosts($conn, $user_id) {
     $sql_posts = "SELECT Posts.*, Users.* 
               FROM Posts 
               INNER JOIN Users ON Posts.user_id = Users.id
-              WHERE Users.id='$user_id'
+              WHERE Users.id=$user_id
               ORDER BY Posts.pubblish_date DESC 
               LIMIT 20";
     $result_posts = mysqli_query($conn, $sql_posts);
