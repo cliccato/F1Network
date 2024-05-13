@@ -24,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] !== "GET") {
     echo '</form>';
     echo '</div>';
 
-    // Search posts by keyword
     if(isset($_GET['parola']) && !empty(trim($_GET['parola']))) {
         $parola = sanitize_input($_GET['parola']);
 
@@ -38,20 +37,18 @@ if ($_SERVER["REQUEST_METHOD"] !== "GET") {
 
         if (mysqli_num_rows($result_posts) > 0) {
             while ($row_posts = mysqli_fetch_assoc($result_posts)) {
-                // Fetch post details
+
                 $post_id = $row_posts['id'];
                 $user_id = $row_posts['user_id'];
                 $username = $row_posts['username'];
                 $content = $row_posts['content'];
                 $pubblish_date = $row_posts['pubblish_date'];
         
-                // Fetch comment count
                 $sql_comments_count = "SELECT COUNT(*) AS comment_count FROM Comments WHERE post_id = $post_id";
                 $result_comments_count = mysqli_query($conn, $sql_comments_count);
                 $row_comments_count = mysqli_fetch_assoc($result_comments_count);
                 $comment_count = $row_comments_count['comment_count'];
         
-                // Display post
                 echo '<div class="post-card rounded">';
                 echo '<div><a href="user.php?userid='.$user_id.'"><b>' . $username . '</b></a> ' . $pubblish_date . '</div>';
                 echo '<div>' . $content . '</div>';
@@ -76,7 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] !== "GET") {
         }
     }
 
-    // Search users by name
     if(isset($_GET['utente']) && !empty(trim($_GET['utente']))) {
         
         $user_search = sanitize_input($_GET['utente']);
