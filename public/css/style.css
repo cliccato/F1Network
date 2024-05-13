@@ -4,8 +4,12 @@ body {
     color: #ddd;
     margin: 20px;
     padding: 20px;
-    cursor: url('../images/cursor.png'), auto;
     display: block;
+    cursor: url('../images/cursor.png'), auto;
+}
+
+.cursore {
+    cursor: url('../images/cursor.png'), auto;
 }
 
 h1 {
