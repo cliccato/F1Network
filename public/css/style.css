@@ -8,9 +8,24 @@ body {
     cursor: url('../images/cursor.png'), auto;
 }
 
-.cursore {
-    cursor: url('../images/cursor.png'), auto;
+.custom-scrollbar {
+    width: 300px; 
+    height: 300px;
+    overflow-y: scroll; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 10px; 
 }
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    background-image: url('../images/bar.png'); 
+    background-size: cover;
+    border-radius: 5px; 
+  }
 
 h1 {
     color: #ddd;
