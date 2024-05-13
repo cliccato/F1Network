@@ -20,6 +20,12 @@ function getComments($conn, $postId) {
             $comments .= '<div class="post-comment">';
             $comments .= '<div><b>' . $row['username'] . '</b> ' . $row['pubblish_date'] . '</div>';
             $comments .= '<div>' . $row['content'] . '</div>';
+            $user_id = $row['user_id'];
+
+            if ($user_id === $_SESSION["user_id"]) {
+                $comment_id = $row['id'];
+                $comments .= '<a class="icon" href="deleteComment.php?comment_id='. $comment_id .'"><i class="fas fa-trash"></i></a>';
+            }
             $comments .= '</div>';
         }
     } else {

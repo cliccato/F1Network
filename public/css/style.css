@@ -216,3 +216,8 @@ footer {
     color: #fff;
     text-decoration: none;
 }
+
+.card {
+    background-color: #333;
+    color: #ddd;
+}

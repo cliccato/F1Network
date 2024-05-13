@@ -40,7 +40,7 @@ require '../src/header.php';
 <a href="https://it.wikipedia.org/wiki/Red_Bull_Racing">Red Bull Racing</a>
   <p class="card-text">E' la scuderia dove corrono Max e Sergio ed è attualmente la prima in classifica.<br>Fondata nel 2005, ha vinto in tutto 7 titoli mondiali prima con
   Sebastian Vettel e poi con Max verstappen e sono alla rincorsa del loro ottavo titolo contro Ferrari</p>
-  <p class="card-text"><small class="text-body-secondary">In figura Max Verstappen a bordo della rb19</small></p>
+  <p class="card-text"><small class="text-body-secondary"  style="color: white;">In figura Max Verstappen a bordo della rb19</small></p>
 </div>
 </div>
 
