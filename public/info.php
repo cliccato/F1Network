@@ -13,7 +13,7 @@ require '../src/connect.php';
 require '../src/header.php';
 require '../src/functions.php';
     
-echo "<h1>Formula 1 Info</h1>";
+echo "<h1>Formula 1 Champions</h1>";
 
 echo "<h2>Campioni in carica</h2>";
 echo '<div class="row">';
@@ -39,7 +39,7 @@ echo '</div>';
 echo '</div>';
 
 echo '<br>';
-echo '<h2>La loro scuderia</h2>';
+echo '<h2>La scuderia</h2>';
 echo '<div class="card mb-3">
 <img src="images/RBracing.jpg" class="card-img-top" alt="...">
 <div class="card-body">

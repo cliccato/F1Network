@@ -188,6 +188,11 @@ footer {
     margin-bottom: 20px;
 }
 
+.logout-form {
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
 .icon {
     color: #fff;
     text-decoration: none;
