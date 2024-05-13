@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS Comments (
     content VARCHAR(200) NOT NULL,
     post_id INT NOT NULL,
     user_id INT NOT NULL,
-    FOREIGN KEY (post_id) REFERENCES Posts(id),
-    FOREIGN KEY (user_id) REFERENCES Users(id)
+    FOREIGN KEY (post_id) REFERENCES Posts(id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES Users(id) ON DELETE CASCADE
 );
 
