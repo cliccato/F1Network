@@ -23,6 +23,7 @@ form {
     margin: 0 auto;
     background-color: #222;
     border: 1px solid #444;
+    color: #ddd;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -31,6 +32,8 @@ form {
 
 input[type="text"],
 input[type="password"],
+input[type="date"],
+input[type="tel"],
 input[type="submit"] {
     width: calc(100% - 20px);
     padding: 8px;

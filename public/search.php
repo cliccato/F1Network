@@ -48,7 +48,10 @@ if ($_SERVER["REQUEST_METHOD"] !== "GET") {
                 $result_comments_count = mysqli_query($conn, $sql_comments_count);
                 $row_comments_count = mysqli_fetch_assoc($result_comments_count);
                 $comment_count = $row_comments_count['comment_count'];
+
+                $parola = $_GET['parola'];
         
+                echo "<h2>Post contenenti la parola '$parola' :</h2>";
                 echo '<div class="post-card rounded">';
                 echo '<div><a href="user.php?userid='.$user_id.'"><b>' . $username . '</b></a> ' . $pubblish_date . '</div>';
                 echo '<div>' . $content . '</div>';
@@ -69,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "GET") {
                 echo '</div></div>';
             }
         } else {
-            echo 'No posts found.';
+            echo 'Nessun post trovato';
         }
     }
 
@@ -85,10 +88,12 @@ if ($_SERVER["REQUEST_METHOD"] !== "GET") {
             $row_users = mysqli_fetch_assoc($result_users);
             $userId = $row_users['id'];
 
+            $utente = $_GET['utente'];
+            echo "<h2>Nomi utenti contenenti la parola '$utente' :</h2>";
             getUserPosts($conn, $userId);
 
         } else {
-            echo 'No users found.';
+            echo 'Nessun utente trovato';
         }
     }
 }

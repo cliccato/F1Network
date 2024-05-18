@@ -1,30 +1,32 @@
-INSERT INTO Users (username, password) VALUES
-('user1', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8'),
-('user2', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8'),
-('user3', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8'),
-('user4', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8'),
-('user5', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8');
+INSERT INTO Users (email, password, username, birth_date, cell) VALUES
+('mario.rossi@example.com', 'hashed_password_1', 'MarioRossi', '1985-06-15', '3331234567'),
+('giulia.bianchi@example.com', 'hashed_password_2', 'GiuliaBianchi', '1990-03-24', '3332345678'),
+('andrea.verdi@example.com', 'hashed_password_3', 'AndreaVerdi', '1988-11-10', NULL),
+('laura.gallo@example.com', 'hashed_password_4', 'LauraGallo', '1992-09-02', '3333456789'),
+('marco.moretti@example.com', 'hashed_password_5', 'MarcoMoretti', '1987-04-18', '3334567890');
 
 INSERT INTO Posts (content, image_url, user_id) VALUES
-('Contenuto del post 1', 'https://www.rossomotori.it/wp-content/uploads/2024/05/Ferrari-Miami.jpg', 1),
-('Contenuto del post 2', NULL, 2),
-('Contenuto del post 3', NULL, 3),
-('Contenuto del post 4', NULL, 4),
-('Contenuto del post 5', 'https://cdn-8.motorsport.com/images/amp/27vzzAR0/s1000/lando-norris-mclaren-mcl38.jpg', 5),
-('Contenuto del post 6', NULL, 1),
-('Contenuto del post 7', NULL, 2),
-('Contenuto del post 8', NULL, 3),
-('Contenuto del post 9', NULL, 4),
-('Contenuto del post 10', NULL, 5);
+('Ferrari annuncia un aggiornamento importante per la prossima gara!', 'https://www.rossomotori.it/wp-content/uploads/2024/05/Ferrari-Miami.jpg', 1),
+('Lewis Hamilton vince il Gran Premio di Monaco!', NULL, 2),
+('Max Verstappen domina le qualifiche a Silverstone.', NULL, 3),
+('Mercedes introduce una nuova ala posteriore innovativa.', NULL, 4),
+('McLaren svela la livrea speciale per il Gran Premio di casa.', 'https://cdn-8.motorsport.com/images/amp/27vzzAR0/s1000/lando-norris-mclaren-mcl38.jpg', 5),
+('Charles Leclerc segna il giro più veloce durante le prove libere.', NULL, 1),
+('Red Bull pronta a introdurre un nuovo motore per la seconda metà della stagione.', NULL, 2),
+('Aston Martin conferma Sebastian Vettel per un altro anno.', NULL, 3),
+('Alpine presenta il nuovo pacchetto aerodinamico per migliorare le prestazioni.', NULL, 4),
+('Williams celebra il suo 50° anniversario con una serie di eventi speciali.', NULL, 5);
+
 
 INSERT INTO Comments (content, post_id, user_id) VALUES
-('Commento 1 al post 1', 1, 2),
-('Commento 2 al post 1', 1, 3),
-('Commento 1 al post 3', 3, 4),
-('Commento 1 al post 5', 5, 1),
-('Commento 2 al post 5', 5, 3),
-('Commento 1 al post 6', 6, 2),
-('Commento 1 al post 8', 8, 1),
-('Commento 2 al post 8', 8, 3),
-('Commento 1 al post 10', 10, 4),
-('Commento 2 al post 10', 10, 5);
+('Non vedo l\'ora di vedere come si comporterà Ferrari con gli aggiornamenti.', 1, 2),
+('Grande vittoria di Hamilton! Monaco è sempre spettacolare.', 2, 3),
+('Verstappen è inarrestabile quest\'anno!', 3, 4),
+('Curioso di vedere come la nuova ala influenzerà le prestazioni di Mercedes.', 4, 1),
+('La nuova livrea di McLaren è fantastica, molto meglio della precedente.', 5, 3),
+('Forza Leclerc! Continuate così!', 6, 2),
+('Un nuovo motore potrebbe davvero fare la differenza per Red Bull.', 7, 1),
+('Contento di vedere Vettel restare con Aston Martin.', 8, 3),
+('Alpine ha bisogno di miglioramenti, speriamo che questo pacchetto funzioni.', 9, 4),
+('Williams ha una grande storia, auguri per il loro anniversario.', 10, 5);
+

@@ -12,10 +12,12 @@
     <div class="form-backgroud">
         <form id="authForm" method="post">
         <img src="images/logo.png">
+        <p>Login</p>
             <input type="text" id="username" name="username" placeholder="Username" required><br>
             <input type="password" id="password" name="password" placeholder="Password" required><br><br>
-            <input type="submit" value="Login" name="login">
-            <input type="submit" value="Register" name="register">
+            <input type="submit" value="Invia" name="login">
+            <br>
+            <small>Non hai un account? <a href="register.php">Registrati qui</a></small>
         </form>
     </div>
 
@@ -25,12 +27,7 @@
         authForm.addEventListener("submit", function(event) {
             var submitButton = event.submitter || document.activeElement;
             var action;
-
-            if (submitButton.name === "login") {
-                action = "login.php";
-            } else if (submitButton.name === "register") {
-                action = "register.php";
-            }
+            action = "login.php";
 
             authForm.action = action;
         });

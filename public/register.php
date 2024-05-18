@@ -1,63 +1,27 @@
-<?php
-require '../src/connect.php';
-require '../src/functions.php';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Racing+Sans+One:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/index.css">
+    <title>F1 Network</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <div class="form-backgroud">
+        <form action="insert.php" method="post">
+        <img src="images/logo.png">
+        <p>Registrazione</p>
+            <input type="text" id="email" name="email" placeholder="Email" required><br>
+            <input type="password" id="password" name="password" placeholder="Password" minlength="8" required><br>
+            <input type="text" id="username" name="username" placeholder="Nome utente" required><br>
+            <small>Data di nascita:</samll>
+            <input type="date" id="date" name="date" placeholder="Data di nascita" required><br>
+            <input type="tel" id="cell" name="cell" placeholder="Numero di telefono (facoltativo)" ><br><br>
 
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: error.php?message=" . urlencode("Request method not supported"));
-    exit();
-}
-
-$fields = array('username', 'password');
-$fieldsSizes = array(50, 100);
-$error_message = '';
-
-foreach(array_combine($fields, $fieldsSizes) as $field => $fieldSize) {
-    if(!isset($_POST[$field])) {
-        $error_message = $field . ' has to exist';
-        break;
-    }
-
-    if(empty($_POST[$field])) {
-        $error_message = $field . ' cant be null';
-        break;
-    }
-
-    if(strlen($_POST[$field]) > $fieldSize) {
-        $error_message = $field . ' cant be long more than ' . $fieldSize . ' chars';
-        break;
-    }      
-}
-
-if(!empty($error_message)) {
-    header("Location: error.php?message=" . urlencode($error_message));
-    exit();
-}
-
-$username = sanitize_input($_POST['username']);
-$password = sha1(sanitize_input($_POST['password']));
-
-$query = "SELECT * FROM Users WHERE username='$username'";
-$result = $conn->query($query);
-if ($result->num_rows > 0) {
-    header("Location: error.php?message=" . urlencode("User ".$username." already exist"));
-    exit();
-}
-
-$query = "INSERT INTO Users (username, password) VALUES ('$username', '$password')";
-if ($conn->query($query) === TRUE) {
-    $query = "SELECT * FROM Users WHERE username='$username'";
-    $result = $conn->query($query);
-    if ($result->num_rows == 1) {
-        $user = $result->fetch_assoc();
-        $_SESSION["user_id"] = $user['id'];
-        header("Location: homepage.php");
-        exit();
-    } else {
-        header("Location: index.php");
-        exit();
-    }
-} else {
-    header("Location: error.php?message=" . urlencode("Error while creating new user"));
-    exit();
-}
-?>
+            <input type="submit" value="Invia" name="register">
+        </form>
+    </div>
+</body>
+</html>
