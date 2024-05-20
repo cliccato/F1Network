@@ -1,9 +1,9 @@
 INSERT INTO Users (email, password, username, birth_date, cell) VALUES
-('mario.rossi@example.com', 'hashed_password_1', 'MarioRossi', '1985-06-15', '3331234567'),
-('giulia.bianchi@example.com', 'hashed_password_2', 'GiuliaBianchi', '1990-03-24', '3332345678'),
-('andrea.verdi@example.com', 'hashed_password_3', 'AndreaVerdi', '1988-11-10', NULL),
-('laura.gallo@example.com', 'hashed_password_4', 'LauraGallo', '1992-09-02', '3333456789'),
-('marco.moretti@example.com', 'hashed_password_5', 'MarcoMoretti', '1987-04-18', '3334567890');
+('mario.rossi@example.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 'MarioRossi', '1985-06-15', '3331234567'),
+('giulia.bianchi@example.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 'GiuliaBianchi', '1990-03-24', '3332345678'),
+('andrea.verdi@example.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 'AndreaVerdi', '1988-11-10', NULL),
+('laura.gallo@example.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 'LauraGallo', '1992-09-02', '3333456789'),
+('marco.moretti@example.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8s', 'MarcoMoretti', '1987-04-18', '3334567890');
 
 INSERT INTO Posts (content, image_url, user_id) VALUES
 ('Ferrari annuncia un aggiornamento importante per la prossima gara!', 'https://www.rossomotori.it/wp-content/uploads/2024/05/Ferrari-Miami.jpg', 1),
