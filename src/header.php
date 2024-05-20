@@ -10,6 +10,9 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
+<a href="../public/homepage.php">
+  <img class="img-fluid float-end" src="images/logo.png" id="page-logo" alt="F1 Network Logo">
+</a>
 <nav class="navbar">
   <ul class="navbar-nav">
     <li class="nav-item">

@@ -81,6 +81,11 @@ a {
     text-decoration: none;
 }
 
+#page-logo{
+    max-height: 100px;
+    max-width: 100px;
+}
+
 a.button {
     display: inline-block;
     padding: 10px 20px;

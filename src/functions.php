@@ -77,7 +77,7 @@ function getUserPosts($conn, $user_id) {
 
         }
     } else {
-        echo 'No posts found.';
+        echo 'Non ci sono post al momento';
     }
 }
 
