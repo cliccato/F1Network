@@ -19,6 +19,9 @@
       <a href="homepage.php"><i class="fas fa-home"></i></a>
     </li>
     <li class="nav-item">
+      <a href="groups.php"><i class="fas fa-people-group"></i></a>
+    </li>
+    <li class="nav-item">
       <a href="search.php"><i class="fas fa-search"></i></a>
     </li>
     <li class="nav-item">
