@@ -1,4 +1,5 @@
 <?php
+require '../src/cross.php';
     require '../src/header.php';
 
     echo "<h1>Formula 1 News Feed</h1>";
