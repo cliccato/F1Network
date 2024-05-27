@@ -1,4 +1,5 @@
 <?php
+require '../src/cross.php';
 require '../src/connect.php';
 require '../src/functions.php';
 
