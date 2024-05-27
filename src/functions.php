@@ -66,7 +66,7 @@ function getUserPosts($conn, $user_id) {
             echo '<div>';
             echo '<i class="fa-regular fa-comment" onclick="toggleComments(' . $post_id . ')"></i> ' . $comment_count;
             if ($user_id === $_SESSION["user_id"]) {
-                echo '<a class="icon" href="deletePost.php?post_id='. $post_id .'"><i class="fas fa-trash"></i></a>';
+                echo '<a class="icon" href="deletePost.php?post_id='. $post_id .'"><i class="fas fa-trash" style="margin-left: 10px"></i></a>';
             }
             echo '</div>';
             echo '<div class="comments" id="comments-' . $post_id . '" style="display: none;">';
