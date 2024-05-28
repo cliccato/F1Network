@@ -9,6 +9,7 @@ echo "<h1>Formula 1 Posts</h1>";
 $sql_posts = "SELECT Posts.*, Users.username 
               FROM Posts 
               INNER JOIN Users ON Posts.user_id = Users.id 
+              WHERE Posts.group_id IS NULL
               ORDER BY Posts.pubblish_date DESC 
               LIMIT 20";
 $result_posts = mysqli_query($conn, $sql_posts);

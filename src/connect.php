@@ -1,6 +1,6 @@
 <?php
 $dbhost = 'localhost:3306';
-$dbname = 'f1network';
+$dbname = 'f1network2';
 $dbuser = 'root';
 $dbpass = '';
 

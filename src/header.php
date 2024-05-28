@@ -34,7 +34,7 @@
       <a href="user.php"><i class="fas fa-user"></i></a>
     </li>
     <li class="nav-item">
-      <a href="info.php"><i class="fas fa-trophy"></i></a>
+      <a href="info2.php"><i class="fas fa-trophy"></i></a>
     </li>
   </ul>
 </nav>

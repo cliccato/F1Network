@@ -36,10 +36,10 @@ if($result) {
 
         if (substr($username, -1) === 's') {
 
-            echo "<h1>$username' posts</h1>";
+            echo "<h1>I post di $username</h1>";
         } else {
 
-            echo "<h1>$username's posts</h1>";
+            echo "<h1>I post di $username</h1>";
         }
     } else {
         echo "<h1>User's posts</h1>";
